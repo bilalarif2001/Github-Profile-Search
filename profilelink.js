@@ -5,7 +5,8 @@ document.getElementById('userlink').addEventListener("click", function (){
     .then(json => {
       let Jsondata=json;
       let profileurl=Jsondata.html_url;
-      document.getElementById('userlink').href=profileurl;
+      
+      profileurl===undefined? alert("User profile link does not exists") : document.getElementById('userlink').href=profileurl;
       
     })
 })
