@@ -26,7 +26,8 @@ document.getElementById('joined').textContent="Joined on: "+ day +"-"+ month+"-"
 
 
 
-document.getElementById("fetchbutton").addEventListener("click", function () {
+document.getElementById("fetchbutton").addEventListener("click", function (e) {
+  e.preventDefault();
   user=document.getElementById('user').value;
 
   fetch(`https://api.github.com/users/${user}`)
